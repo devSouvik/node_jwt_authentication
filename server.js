@@ -46,7 +46,7 @@ function authenticateToken(req, res, next) {
       if (err) {
         res.sendStatus(403);
       } else {
-        req.user = user; //
+        req.user = user; // complete payload stored inside the jWT token
         console.log(user);
         next();
       }
